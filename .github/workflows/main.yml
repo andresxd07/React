@@ -25,6 +25,6 @@ jobs:
         git fetch origin
         git checkout prueba2
 
-        git merge --allow-unrelated-histories -s ours origin/prueba -m "Automatically merge changes from prueba to prueba2"
+        git merge origin/prueba -m "Automatically merge changes from prueba to prueba2"
         
         git push origin prueba2
