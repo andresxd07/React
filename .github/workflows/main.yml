@@ -25,4 +25,14 @@ jobs:
         git fetch origin
         git checkout prueba2
         git merge --allow-unrelated-histories --no-ff origin/prueba -m "Automatically merge changes from prueba to prueba2"
+
+        git checkout --theirs .github/workflows/main.yml
+        git add .github/workflows/main.yml
+        git merge --continue
+
+        git config --global user.email "aandresarango087@gmail.com"
+        git config --global user.name "Andrres"
+
+        git commit -m "Automatically resolve merge conflicts"
+        
         git push origin prueba2
